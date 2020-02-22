@@ -1,0 +1,7 @@
+<p>hello {{ title }}</p>
+<button (click) = "onclickedButton()">Change</button>
+<div>
+  <label>Add an item: <input #newItem></label>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+</div>
+
