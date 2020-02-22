@@ -39,15 +39,12 @@ export class TodoService {
     switch (filter) {
       case Filter.Active:
         this.filteredTodo = this.todos.filter(item => !item.isCompleted);
-        this.lengthSubject.next(this.filteredTodo.length);
         break;
       case Filter.Completed:
         this.filteredTodo = this.todos.filter(item => item.isCompleted);
-        this.lengthSubject.next(this.filteredTodo.length);
         break;
       case Filter.All:
         this.filteredTodo = [...this.todos];
-        this.lengthSubject.next(this.filteredTodo.length);
         break;
     }
     if (isFiltering) {
